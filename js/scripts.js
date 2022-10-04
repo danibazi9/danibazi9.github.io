@@ -32,3 +32,13 @@ window.addEventListener('DOMContentLoaded', event => {
     });
 
 });
+
+// not using jquery
+window.onload = function(){
+  var anchors = document.getElementsByTagName('a');
+  for (var i=0; i<anchors.length; i++){
+	if (!anchors[i].getAttribute('class') || anchors[i].getAttribute('class') === 'social-icon')
+      anchors[i].setAttribute('target', '_blank');
+  }
+}
+// jquery is prettier. :-)
